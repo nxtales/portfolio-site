@@ -109,6 +109,92 @@
                     <br><br><br>
                 </div>
             </div/>
+            <div class="w3-third w3-container w3-margin-bottom">
+                <div class="w3-container w3-white">
+                    <p>FOTOS DE CACHORRINHO :)</p>
+                    <p>Usando a Pexels API!</p>
+                    <script>
+                        const apiKey = 'eY88BVIv8Ge9pKuQuzlNt49bosImY9Cg8PCWBUPMyEe2V4JX0qtfUtbY';
+                      </script>
+                      
+                      <div id="gallery"></div>
+                      
+                      <script>
+                        fetch(`https://api.pexels.com/v1/search?query=shih-tzu&per_page=6`, {
+                          headers: {
+                            Authorization: apiKey
+                          }
+                        })
+                        .then(response => response.json())
+                        .then(data => {
+                          const gallery = document.getElementById('gallery');
+                          data.photos.forEach(photo => {
+                            const img = document.createElement('img');
+                            img.src = photo.src.medium;
+                            gallery.appendChild(img);
+                          });
+                        });
+                      </script>
+            </div/>
+        </div>
+            <div class="w3-third w3-container w3-margin-bottom">
+                <div class="w3-container w3-white">
+                    <p>Meu GitHub</p>
+                    <p>Usando a GitHub API!</p>
+                    <script>
+                        const apiKeyGh = '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';
+                    </script>
+                    <div id="repos">
+                        <script>
+                             fetch('https://api.github.com/users/nxtales/repos', {
+                                headers: {
+                                Authorization: `token ${apiKeyGh}`
+                                }
+                            })
+                            .then(response => response.json())
+                            .then(data => {
+                                const repos = document.getElementById('repos');
+                                let index = 0;
+
+                                function fetchNextRepo() {
+                                if (index < data.length) {
+                                    const repo = data[index];
+                                    const repoName = repo.name;
+
+                                    fetch(`https://api.pexels.com/v1/search?query=${repoName}&per_page=1`, {
+                                    headers: {
+                                        Authorization: apiKey
+                                    }
+                                    })
+                                    .then(response => response.json())
+                                    .then(photoData => {
+                                    const repoLink = document.createElement('a');
+                                    repoLink.href = repo.html_url;
+                                    repoLink.textContent = repoName;
+                                    const br = document.createElement('br');
+                                    repos.appendChild(repoLink);
+                                    repos.appendChild(br);
+
+                                    if (photoData.photos.length > 0) {
+                                        const photoUrl = photoData.photos[0].src.medium;
+                                        const img = document.createElement('img');
+                                        img.src = photoUrl;
+                                        repos.appendChild(img);
+                                        repos.appendChild(document.createElement('br'));
+                                    }
+
+                                    index++;
+                                    fetchNextRepo();
+                                    });
+                                }
+                                }
+
+                                    fetchNextRepo();
+                                });
+                          </script>
+                    </div>  
+                    
+            </div/>
         </div>
 
         
