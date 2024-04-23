@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soft Skills</title>
+    <link rel="stylesheet" href="./natalistyles.css" />
+    <link rel="stylesheet" href="./w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        body {cursor: url('./resources/cute-pop-cat-packl.png') 64 64, auto !important;}
+        a {cursor: url('./resources/cute-pop-cat-packr.png') 64 64, auto !important;}
+        button {cursor: url('./resources/cute-pop-cat-packr.png') 64 64, auto !important;}
+        </style>
+</head>
+<body>
+
+    
+        
+    
+    <!-- Sidebar/menu -->
+    <nav class="w3-sidebar w3-collapse w3-white" style="z-index:3;width:300px;" id="mySidebar">
+        <br>
+        <div class="w3-container">
+            <div id="container-titulo-portfolio">
+                <img src="./img/images.jfif" style="width:60%;" class="w3-round"><br><br>
+                <h1 id="nome-natalia">Natthalie</h1>
+                
+                <!-- Adicione mais informações sobre você e seu trabalho aqui -->
+            </div>
+            <p class="musica-do-dia"> (っ◔◡◔っ) ♥ Música do Dia ♥ </p>
+            <!--player de música-->
+            <div class="audio-player">
+                <div class="player-controls">
+                    <div class="song-info">
+                        <div class="song-title">ETA</div>
+                        <p class="artist">New Jeans</p>
+                    </div>
+                    <div>
+                        <audio id="audio-player" src="./resources/NewJeans (뉴진스) - ETA (Audio).mp3"></audio>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress"></div>
+                    </div>
+                    <div class="buttons">
+                        <button class="skip-btn"><svg viewBox="0 0 16 16" class="bi bi-skip-backward-fill" fill="currentColor" height="16" width="16" xmlns="http://www.w3.org/2000/svg"> <path d="M.5 3.5A.5.5 0 0 0 0 4v8a.5.5 0 0 0 1 0V8.753l6.267 3.636c.54.313 1.233-.066 1.233-.697v-2.94l6.267 3.636c.54.314 1.233-.065 1.233-.696V4.308c0-.63-.693-1.01-1.233-.696L8.5 7.248v-2.94c0-.63-.692-1.01-1.233-.696L1 7.248V4a.5.5 0 0 0-.5-.5z"></path> </svg></button>
+                        <button class="play-btn" onclick="document.getElementById('audio-player').play();"><svg viewBox="0 0 16 16" class="bi bi-play-fill" fill="currentColor" height="16" width="16" xmlns="http://www.w3.org/2000/svg"> <path d="m11.596 8.697-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.692-1.01 1.233-.696l6.363 3.692a.802.802 0 0 1 0 1.393z"></path> </svg></button>
+                        <button class="pause-btn" onclick="document.getElementById('audio-player').pause();"><svg viewBox="0 0 16 16" class="bi bi-pause-fill" fill="currentColor" height="16" width="16" xmlns="http://www.w3.org/2000/svg" style="color: rgb(66, 66, 66);"> <path fill="#424242" d="M5.5 3.5A1.5 1.5 0 0 1 7 5v6a1.5 1.5 0 0 1-3 0V5a1.5 1.5 0 0 1 1.5-1.5zm5 0A1.5 1.5 0 0 1 12 5v6a1.5 1.5 0 0 1-3 0V5a1.5 1.5 0 0 1 1.5-1.5z"></path> </svg></button>
+                        <button class="volume-btn"><svg viewBox="0 0 16 16" class="bi bi-volume-up-fill" fill="currentColor" height="16" width="16" xmlns="http://www.w3.org/2000/svg" style="color: rgb(66, 66, 66);"> <path fill="#424242" d="M11.536 14.01A8.473 8.473 0 0 0 14.026 8a8.473 8.473 0 0 0-2.49-6.01l-.708.707A7.476 7.476 0 0 1 13.025 8c0 2.071-.84 3.946-2.197 5.303l.708.707z"></path> <path fill="#424242" d="M10.121 12.596A6.48 6.48 0 0 0 12.025 8a6.48 6.48 0 0 0-1.904-4.596l-.707.707A5.483 5.483 0 0 1 11.025 8a5.483 5.483 0 0 1-1.61 3.89l.706.706z"></path> <path fill="#424242" d="M8.707 11.182A4.486 4.486 0 0 0 10.025 8a4.486 4.486 0 0 0-1.318-3.182L8 5.525A3.489 3.489 0 0 1 9.025 8 3.49 3.49 0 0 1 8 10.475l.707.707zM6.717 3.55A.5.5 0 0 1 7 4v8a.5.5 0 0 1-.812.39L3.825 10.5H1.5A.5.5 0 0 1 1 10V6a.5.5 0 0 1 .5-.5h2.325l2.363-1.89a.5.5 0 0 1 .529-.06z"></path> </svg></button>
+                        <div class="volume-slider">
+                            <div class="volume-slider-bar"></div>
+                            <div class="volume-slider-handle"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="w3-bar-block">
+          <a href="./index.html" onclick="w3_close()" class="w3-bar-item w3-button w3-padding w3-text-teal"><i class="fa fa-th-large fa-fw w3-margin-right"></i>PORTFOLIO</a>
+          <a href="./certificacoes.html" onclick="w3_close()" class="w3-bar-item w3-button w3-padding"><i class="fa fa-user fa-fw w3-margin-right"></i>CERTIFICAÇÕES</a>
+          <a href="./sobre mim.html" onclick="w3_close()" class="w3-bar-item w3-button w3-padding"><i class="fa fa-envelope fa-fw w3-margin-right"></i>SOBRE MIM</a>
+      </div>
+        <div class="w3-panel w3-large">
+            <i class="fa fa-facebook-official w3-hover-opacity"></i>
+            <i class="fa fa-instagram w3-hover-opacity"></i>
+            <i class="fa fa-snapchat w3-hover-opacity"></i>
+            <i class="fa fa-pinterest-p w3-hover-opacity"></i>
+            <i class="fa fa-twitter w3-hover-opacity"></i>
+            <i class="fa fa-linkedin w3-hover-opacity"></i>
+        </div>
+    </nav>
+
+   
+    <!-- !PAGE CONTENT! -->
+    <div class="w3-main" style="margin-left:300px">
+
+        <!-- Header -->
+        
+        <header id="portfolio">
+            <a href="#"><img src="/w3images/avatar_g2.jpg" style="width:65px;" class="w3-circle w3-right w3-margin w3-hide-large w3-hover-opacity"></a>
+            <span class="w3-button w3-hide-large w3-xxlarge w3-hover-text-grey" onclick="w3_open()"><i class="fa fa-bars"></i></span>
+            <div class="w3-container">
+                <h1 id="container-titulo-portfolio"><b>Meu Portfolio</b></h1>
+                <div class="w3-section w3-bottombar w3-padding-16">
+                    <span class="w3-margin-right">Categoria:</span>
+                    <a href="./index.html"><button class="w3-button w3-white">landing page</button></a>
+                    <a href="./hard Skills.html"><button class="w3-button w3-white"><i class="fa fa-diamond w3-margin-right"></i>Hard Skills</button></a>
+                    <a href="./soft Skills.html"><button class="w3-button w3-black"><i class="fa fa-diamond w3-margin-right"></i>Soft Skills</button></a>
+                    <a href="./projetos.html"><button class="w3-button w3-white w3-hide-small"><i class="fa fa-photo w3-margin-right"></i>Projetos</button></a>
+                    <a href="./cadernos da natalia.html"><button class="w3-button w3-white w3-hide-small"><i class="fa fa-map-pin w3-margin-right"></i>Cadernos Da Natalia</button></a></div>
+            </div>
+        </header>
+
+        <!-- First Photo Grid-->
+        <div class="w3-row-padding" id="grid">
+            <div class="w3-third w3-container w3-margin-bottom">
+                <img src="./img/Principais-estilos-de-lideranca-e1627919362713.jpg" alt="Eu no show do twice" style="width:100%" class="w3-hover-opacity">
+                <div class="w3-container w3-white">
+                    <p><b>GESTÃO DE PROJETOS E LIDERANÇA</b></p>
+                    <ul>
+                      <li>Curso de extensão pela Faculdade Engenheiro Salvador Arena: noções em PMBOK7 e Scrum;</li>
+                      <li>Noções em Gestão de Pessoas, Planejamento, Administração;</li>
+                      <li>Trabalho voluntário e liderança de projetos diversos de extensão universitária;</li>
+                      <li>Representante de Turma por 3 anos (e contando!) em ambos o SENAI e a FESA</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="w3-third w3-container w3-margin-bottom">
+                <img src="./img/Yellow-Belt-O-que-é.jpg" alt="Norway" style="width:100%" class="w3-hover-opacity">
+                <div class="w3-container w3-white">
+                  <p><b>YELLOW BELT</b></p>
+                  <p>Participação no processo de certificação Lean Six Sigma - Yellow Belt oferecido pela Vivo Telêfonica São Paulo S.A., com duração de 4 meses, de modo a identificar e solucionar uma perda para a empresa por meio do desenvolvimento de um projeto em grupo de 4 pessoas</p>
+                <P>Assim, obtive uma certificação que comprova que Consigo gerenciar meu tempo de forma eficaz, priorizando tarefas e cumprindo prazos. Sou organizado e focado, o que me permite manter o controle mesmo em situações de alta pressão. Minha capacidade de planejamento me ajuda a alcançar resultados consistentes e de alta qualidade</P>
+                </div>
+            </div>
+            
+            <div class="w3-third w3-container">
+                <img src="./img/5518573-scaled.jpg" style="width:100%" class="w3-hover-opacity">
+                <div class="w3-container w3-white">
+                  <p><b>COMUNICAÇÃO</b></p>
+                  <p> Possuo habilidades sólidas de comunicação, tanto oral quanto escrita. Sou capaz de explicar conceitos técnicos de forma clara e acessível, adaptando minha comunicação ao público-alvo. Além disso, sei ouvir atentamente e fazer as perguntas certas para entender as necessidades dos clientes e colegas</p>
+                </div>
+            </div>
+        </div>
+
+        <br>
+         <!-- First Photo Grid-->
+         <div class="w3-row-padding" id="grid">
+          <div class="w3-third w3-container w3-margin-bottom">
+              <img src="./img/resolucao-de-problemas-complexos-scaled.jpg" alt="Eu no show do twice" style="width:100%" class="w3-hover-opacity">
+              <div class="w3-container w3-white">
+                  <p><b>RESOLUÇÃO DE PROBLEMAS</b></p>
+                  <p>Sou um solucionador de problemas criativo e analítico. Tenho facilidade em identificar e analisar problemas complexos, buscando sempre entender suas causas raiz. Minha abordagem proativa me permite encontrar soluções eficazes e implementá-las de forma eficiente</p>
+              </div>
+          </div>
+          <div class="w3-third w3-container w3-margin-bottom">
+            <img src="./img/adaptabilidade-profissional-poder-da-escuta-1024x701.jpg" alt="Eu no show do twice" style="width:100%" class="w3-hover-opacity">
+            <div class="w3-container w3-white">
+                <p><b>ADAPTABILIDADE</b></p>
+                <p>Estou sempre disposto a aprender e me adaptar a novas tecnologias e ambientes de trabalho. Tenho facilidade em adquirir novas habilidades e conhecimentos, o que me permite acompanhar as rápidas mudanças no campo da tecnologia da informação.</p>
+            </div>
+        </div>
+
+        
+</body>
+</html>
